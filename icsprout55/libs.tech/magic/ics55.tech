@@ -143,73 +143,108 @@ cifoutput
   style gdsii
   scalefactor 1 nanometers
 
-  layer act act
+  layer ACT act
     calma 2 1
-  layer nw nw
+  layer NW nw
     calma 9 1
-  layer poly poly
+  layer POLY poly
     calma 41 1
-  layer ct ct
+  layer CT ct
     calma 72 1
-  layer np np
+  layer NP np
     calma 52 1
-  layer pp pp
+  layer PP pp
     calma 53 1
-  layer met1 met1
+
+  layer MET1 met1
+    labels 	met1 noport
     calma 81 1
-  layer met1_pin met1_pin
+  
+  layer MET1_PIN met1
+    labels 	met1 port
     calma 81 6
-  layer via1 via1
+
+  layer VIA1 via1
     calma 91 1
-  layer met2 met2
+
+  layer MET2 met2
+    labels 	met2 noport
     calma 82 1
-  layer met2_pin met2_pin
+
+  layer MET2_PIN met2
+    labels 	met2 port
     calma 82 6
-  layer via2 via2
+
+  layer VIA2 via2
     calma 92 1
-  layer met3 met3
+
+  layer MET3 met3
+    labels 	met3 noport
     calma 83 1
-  layer met3_pin met3_pin
+
+  layer MET3_PIN met3
+    labels 	met3 port
     calma 83 6
-  layer via3 via3
+
+  layer VIA3 via3
     calma 93 1
-  layer met4 met4
+
+  layer MET4 met4
+    labels 	met4 noport
     calma 84 1
-  layer met4_pin met4_pin
+
+  layer MET4_PIN met4
+    labels 	met4 port
     calma 84 6
-  layer via4 via4
+
+  layer VIA4 via4
     calma 94 1
-  layer met5 met5
+
+  layer MET5 met5
+    labels 	met5 noport
     calma 85 1
-  layer met5_pin met5_pin
+
+  layer MET5_PIN met5
+    labels 	met5 port
     calma 85 6
-  layer t4v2 t4v2
+
+  layer T4V2 t4v2
     calma 113 1
-  layer t4m2 t4m2
+
+  layer T4M2 t4m2
+    labels 	t4m2 noport
     calma 103 1
-  layer t4m2_pin t4m2_pin
+
+  layer T4M2_PIN t4m2
+    labels 	t4m2 port
     calma 103 6
-  layer rv rv
+
+  layer RV rv
     calma 120 1
-  layer rdl rdl
+
+  layer RDL rdl
+    labels 	rdl noport
     calma 123 1
-  layer rdl_pin rdl_pin
+
+  layer RDL_PIN rdl
+    labels 	rdl port
     calma 123 6
-  layer ap ap
+
+  layer AP ap
     calma 121 1
-  layer rpoly rpoly
+  layer RPOLY rpoly
     calma 41 4
-  layer unk_17_1 unk_17_1
+  layer UNK_17_1 unk_17_1
     calma 17 1
-  layer unk_18_1 unk_18_1
+  layer UNK_18_1 unk_18_1
     calma 18 1
-  layer unk_55_1 unk_55_1
+  layer UNK_55_1 unk_55_1
     calma 55 1
-  layer unk_71_1 unk_71_1
+  layer UNK_71_1 unk_71_1
     calma 71 1
-  layer unk_191_12 unk_191_12
+  layer UNK_191_12 unk_191_12
     calma 191 12
-  layer bound bound
+  layer BOUND bound
     calma 351 12
 
 style drc
@@ -231,77 +266,98 @@ cifinput
   style gdsii
   scalefactor 1 nanometers
 
-  layer l1 act
-  layer l2 nw
-  layer poly poly
-  layer l4 ct
-  layer l5 np
-  layer l6 pp
-  layer m1 met1
-  layer l8 met1_pin
-  layer via1 via1
-  layer m2 met2
-  layer l11 met2_pin
-  layer via2 via2
-  layer m3 met3
-  layer l14 met3_pin
-  layer via3 via3
-  layer m4 met4
-  layer l17 met4_pin
-  layer via4 via4
-  layer m5 met5
-  layer l20 met5_pin
-  layer via5 t4v2
-  layer m6 t4m2
-  layer l23 t4m2_pin
-  layer via6 rv
-  layer m7 rdl
-  layer l26 rdl_pin
-  layer l27 ap
-  layer l28 rpoly
-  layer l29 unk_17_1
-  layer l30 unk_18_1
-  layer l31 unk_55_1
-  layer l32 unk_71_1
-  layer l33 unk_191_12
-  layer l34 unk_81_2
-  layer l35 bound
+  layer l1 ACT
+  layer l2 NW
+  layer poly POLY
+  layer l4 CT
+  layer l5 NP
+  layer l6 PP
+  
+  layer m1 MET1,MET1_PIN
+  labels MET1
+  labels MET1_PIN port
+  
+  layer via1 VIA1
+  
+  layer m2 MET2,MET2_PIN
+  labels MET2
+  labels MET2_PIN port
+  
+  layer via2 VIA2
+  
+  layer m3 MET3,MET3_PIN
+  labels MET3
+  labels MET3_PIN port
+  
+  layer via3 VIA3
+  
+  layer m4 MET4,MET4_PIN
+  labels MET4
+  labels MET4_PIN port
+  
+  layer via4 VIA4
+  
+  layer m5 MET5,MET5_PIN
+  labels MET5
+  labels MET5_PIN port
+  
+  layer via5 T4V2
+  
+  layer m6 T4M2,T4M2_PIN
+  labels T4M2
+  labels T4M2_PIN port
+  
+  layer via6 RV
+  
+  layer m7 RDL,RDL_PIN
+  labels RDL
+  labels RDL_PIN port
+  
+  layer l27 AP
+  layer l28 RPOLY
+  layer l29 UNK_17_1
+  layer l30 UNK_18_1
+  layer l31 UNK_55_1
+  layer l32 UNK_71_1
+  layer l33 UNK_191_12
+  layer l34 UNK_81_2
+  layer l35 BOUND
 
-  calma act 2 1
-  calma nw 9 1
-  calma poly 41 1
-  calma ct 72 1
-  calma np 52 1
-  calma pp 53 1
-  calma met1 81 1
-  calma met1_pin 81 6
-  calma via1 91 1
-  calma met2 82 1
-  calma met2_pin 82 6
-  calma via2 92 1
-  calma met3 83 1
-  calma met3_pin 83 6
-  calma via3 93 1
-  calma met4 84 1
-  calma met4_pin 84 6
-  calma via4 94 1
-  calma met5 85 1
-  calma met5_pin 85 6
-  calma t4v2 113 1
-  calma t4m2 103 1
-  calma t4m2_pin 103 6
-  calma rv 120 1
-  calma rdl 123 1
-  calma rdl_pin 123 6
-  calma ap 121 1
-  calma rpoly 41 4
-  calma unk_17_1 17 1
-  calma unk_18_1 18 1
-  calma unk_55_1 55 1
-  calma unk_71_1 71 1
-  calma unk_191_12 191 12
-  calma unk_81_2 81 2
-  calma bound 351 12
+  calma ACT 2 1
+  calma NW 9 1
+  calma POLY 41 1
+  calma CT 72 1
+  calma NP 52 1
+  calma PP 53 1
+  calma MET1 81 1
+  calma MET1_PIN 81 6
+  calma VIA1 91 1
+  calma MET2 82 1
+  calma MET2_PIN 82 6
+  calma VIA2 92 1
+  calma MET3 83 1
+  calma MET3_PIN 83 6
+  calma VIA3 93 1
+  calma MET4 84 1
+  calma MET4_PIN 84 6
+  calma VIA4 94 1
+  calma MET5 85 1
+  calma MET5_PIN 85 6
+  calma T4V2 113 1
+  calma T4M2 103 1
+  calma T4M2_PIN 103 6
+  calma RV 120 1
+  calma RDL 123 1
+  calma RDL_PIN 123 6
+  calma AP 121 1
+  calma RPOLY 41 4
+  calma UNK_17_1 17 1
+  calma UNK_18_1 18 1
+  calma UNK_55_1 55 1
+  calma UNK_71_1 71 1
+  calma UNK_191_12 191 12
+  calma UNK_81_2 81 2
+  calma BOUND 351 12
 
   # FIXME: Once magic supports anything more than 255
   # for the calma layers, this will remain to be the
